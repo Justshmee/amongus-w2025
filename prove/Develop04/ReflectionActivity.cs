@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace MindfulnessApp
 {
-    // Reflection Activity
     public class ReflectionActivity : Activity
     {
         private List<string> prompts = new List<string>()
@@ -36,18 +35,16 @@ namespace MindfulnessApp
         {
             DisplayStartMessage();
             Random rand = new Random();
-            // Select a random prompt
             string prompt = prompts[rand.Next(prompts.Count)];
             Console.WriteLine(prompt);
             Console.WriteLine("Now, ponder on each of the following questions related to this experience:");
             
             DateTime endTime = DateTime.Now.AddSeconds(duration);
-            // Randomly ask questions until time runs out
             while (DateTime.Now < endTime)
             {
                 string question = questions[rand.Next(questions.Count)];
                 Console.WriteLine($"\n>> {question}");
-                PauseWithSpinner(5);  // Gives time for the user to think before the next question
+                PauseWithSpinner(5);  
             }
             DisplayEndMessage();
         }

@@ -4,7 +4,6 @@ using System.Threading;
 
 namespace MindfulnessApp
 {
-    // Listing Activity
     public class ListingActivity : Activity
     {
         private List<string> prompts = new List<string>()
@@ -25,7 +24,6 @@ namespace MindfulnessApp
         {
             DisplayStartMessage();
             Random rand = new Random();
-            // Select a random prompt
             string prompt = prompts[rand.Next(prompts.Count)];
             Console.WriteLine(prompt);
             Console.WriteLine("You will have a few seconds to think before you start listing your items.");
@@ -35,7 +33,6 @@ namespace MindfulnessApp
             DateTime endTime = DateTime.Now.AddSeconds(duration);
             int count = 0;
             List<string> items = new List<string>();
-            // Read user inputs until the duration expires
             while (DateTime.Now < endTime)
             {
                 if (Console.KeyAvailable)
@@ -49,7 +46,6 @@ namespace MindfulnessApp
                 }
                 else
                 {
-                    // Brief pause to prevent a tight loop
                     Thread.Sleep(100);
                 }
             }

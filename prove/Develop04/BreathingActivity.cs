@@ -2,7 +2,6 @@ using System;
 
 namespace MindfulnessApp
 {
-    // Breathing Activity
     public class BreathingActivity : Activity
     {
         public BreathingActivity() : base("Breathing Activity", 
@@ -18,10 +17,10 @@ namespace MindfulnessApp
             while (DateTime.Now < endTime)
             {
                 Console.Write("Breathe in... ");
-                Countdown(4); // Adjust duration per breath cycle as needed
+                Countdown(4); 
                 Console.WriteLine();
                 Console.Write("Breathe out... ");
-                Countdown(6); // Adjust duration per breath cycle as needed
+                Countdown(6); 
                 Console.WriteLine("\n");
             }
             DisplayEndMessage();
