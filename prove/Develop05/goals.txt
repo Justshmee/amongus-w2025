@@ -1,0 +1,4 @@
+2000000
+SimpleGoal:happy,get happy,1000000,True
+EternalGoal:love,get family,1000000
+ChecklistGoal:stop,just stop,1000000,365,4311,1,False
